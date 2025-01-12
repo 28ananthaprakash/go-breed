@@ -29,6 +29,9 @@ func main() {
 	flag.BoolVar(&app.config.useCache, "cache", false, "Use template cache")
 	flag.Parse()
 
+	// Added a monkey patch for GoLand -
+	app.config.useCache = true
+
 	srv := &http.Server{
 		Addr:              port,
 		Handler:           app.routes(),
