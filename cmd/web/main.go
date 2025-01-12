@@ -30,7 +30,7 @@ func main() {
 	flag.Parse()
 
 	// Added a monkey patch for GoLand -
-	app.config.useCache = true
+	//app.config.useCache = true
 
 	srv := &http.Server{
 		Addr:              port,
